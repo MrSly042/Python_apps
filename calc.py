@@ -5,7 +5,7 @@ from kivy.core.window import Window
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 
-class CalculatorApp(App):
+class Chibuike(App):
   def build(self):
     layout = BoxLayout(orientation='vertical')
     self.result_string = ""
@@ -15,7 +15,8 @@ class CalculatorApp(App):
       ['7', '8', '9', '/'],
       ['4', '5', '6', '*'],
       ['1', '2', '3', '-'],
-      ['C', '0', '=', '+']
+      ['C', '0', '=', '+'],
+      ['a', 'b', 'c']
     ]
     for row in buttons:
       h_layout = BoxLayout()
@@ -30,7 +31,7 @@ class CalculatorApp(App):
     layout.add_widget(self.result_label)
     
     # Set the window title
-    Window.title = "Chibuike's First App"
+    Window.title = "Hey"
 
     # Show the minimize button
     Window.minimize = True
@@ -42,7 +43,7 @@ class CalculatorApp(App):
     Window.maximize = True
 
     # Set the window size
-    Window.size = (300, 400)
+    Window.size = (1000, 500)
 
     return layout
 
@@ -67,4 +68,4 @@ class CalculatorApp(App):
     self.result_label.text = self.result_string
 
 if __name__ == '__main__':
-  CalculatorApp().run()
+  Chibuike().run()
